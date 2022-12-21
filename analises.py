@@ -12,9 +12,23 @@ from sklearn.metrics import accuracy_score
 #importando dataframe da UCI
 df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data')
 df.columns = ['sepal-length','sepal-width','petal-length','petal-width','class']
+
+print('\n *** *** *** - - - - - - - - - - Base de dados Iris - - - - - - - - - - - *** *** ***\n')
 print(df.head())
+print()
 
 #Análise Descritiva do dataframe
-
-
+print('\n - - - - - - - - - -  Análise Descritiva  - - - - - - - - - - - \n')
 print(df.describe().transpose())
+
+#Info
+print('\n - - - - - - - - - - Info - - - - - - - - - - - \n')
+print(df.info())
+print('- - - - - - - - - - - - - - - - - - - - - - - - - ')
+
+#Buscando valores nulos
+print('\n - - - - - - - - - - Valores nulos - - - - - - - - - - - \n')
+print(df.isnull().sum())
+print('- - - - - - - - - - - - - - - - - - - - - - - - - ')
+
+
