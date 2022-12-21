@@ -15,3 +15,6 @@ df.columns = ['sepal-length','sepal-width','petal-length','petal-width','class']
 print(df.head())
 
 #Análise Descritiva do dataframe
+
+
+print(df.describe().transpose())
