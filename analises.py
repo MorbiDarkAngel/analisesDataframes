@@ -24,11 +24,16 @@ print(df.describe().transpose())
 #Info
 print('\n - - - - - - - - - - Info - - - - - - - - - - - \n')
 print(df.info())
-print('- - - - - - - - - - - - - - - - - - - - - - - - - ')
+print('- '*27)
 
 #Buscando valores nulos
 print('\n - - - - - - - - - - Valores nulos - - - - - - - - - - - \n')
 print(df.isnull().sum())
-print('- - - - - - - - - - - - - - - - - - - - - - - - - ')
+print('- '*30)
 
+# Excluindo uma das colunas
+x = df.drop('class', axis=1)
+print('\n - - - - - - - - - - Dataframe atualizado - - - - - - - - - - - \n')
+print(x.head())
+print('- '*30)
 
